@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>عالم اسكندر</title>
+<style>body{background:#0a0505;color:#fff;font-family:Arial;text-align:center;padding:20px}input{display:block;width:90%;max-width:300px;margin:10px auto;padding:12px;border-radius:10px;border:1px solid #555;background:#222;color:#fff}button{background:#c22a2a;color:#fff;border:0;padding:13px 30px;border-radius:10px;font-size:20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.card{background:#1a1010;padding:15px;border-radius:15px;border:1px solid #444}</style>
+</head>
+<body>
+<div id="login">
+<h1 style="color:#ff6b6b;font-size:38px">عالم اسكندر</h1>
+<p>الأمن السيبراني مش رفاهية .. دي حماية لحياتك</p>
+<input id="n" placeholder="اسمك">
+<input id="p" type="password" placeholder="كلمة السر">
+<button onclick="go()">دخول للموقع</button>
+</div>
+<div id="site" style="display:none">
+<h1>أهلا بيك يا <span id="name"></span> 🔥</h1>
+<p id="clock"></p>
+<div class="grid">
+<div class="card">🛡️<br>مساعدة البنات<br><button>واتساب</button></div>
+<div class="card">🖼️<br>استرجاع الصور<br><button>واتساب</button></div>
+<div class="card">📱<br>سوفت<br><button>واتساب</button></div>
+<div class="card">>_ <br>تيرمكس مجاني<br><button>ادخل</button></div>
+<div class="card">💎<br>تيرمكس VIP<br><button>اشتري</button></div>
+<div class="card">💻<br>برمجة مجاني<br><button>ادخل</button></div>
+<div class="card">🚀<br>برمجة VIP<br><button>اشتري</button></div>
+<div class="card">📈<br>تداول 900ج<br><button>اشتري</button></div>
+</div>
+</div>
+<script>
+function go(){let n=document.getElementById('n').value;if(!n){alert('اكتب اسمك');return}document.getElementById('login').style.display='none';document.getElementById('site').style.display='block';document.getElementById('name').innerText=n;}
+setInterval(()=>{let d=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Cairo'}));let c=document.getElementById('clock');if(c)c.innerText=d.toLocaleTimeString('ar-EG')},1000);
+</script>
+</body>
+</html>
